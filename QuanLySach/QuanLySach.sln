@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLySach", "QuanLySach\QuanLySach.csproj", "{BBC6A7BF-66E0-4F7D-A638-406FF0B07CEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{2725B513-928F-45FE-8BAD-F95209135228}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,14 @@ Global
 		{BBC6A7BF-66E0-4F7D-A638-406FF0B07CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBC6A7BF-66E0-4F7D-A638-406FF0B07CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBC6A7BF-66E0-4F7D-A638-406FF0B07CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2725B513-928F-45FE-8BAD-F95209135228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2725B513-928F-45FE-8BAD-F95209135228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2725B513-928F-45FE-8BAD-F95209135228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2725B513-928F-45FE-8BAD-F95209135228}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
