@@ -11,3 +11,6 @@ C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\o
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csproj.GenerateResource.Cache
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.exe
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.pdb
+E:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.exe.config
+E:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.exe
+E:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.pdb
