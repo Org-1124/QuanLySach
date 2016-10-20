@@ -1,0 +1,4 @@
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DTO\bin\Debug\DTO.dll
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DTO\bin\Debug\DTO.pdb
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DTO\obj\Debug\DTO.dll
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DTO\obj\Debug\DTO.pdb

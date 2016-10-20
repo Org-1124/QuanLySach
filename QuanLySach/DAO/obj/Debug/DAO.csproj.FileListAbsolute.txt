@@ -1,0 +1,7 @@
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DAO.dll
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DAO.pdb
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DTO.dll
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DTO.pdb
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.dll
+D:\Data\HocTap\Tai lieu\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.pdb
