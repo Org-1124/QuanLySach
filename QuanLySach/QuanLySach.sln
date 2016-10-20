@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLySach", "QuanLySach\Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{39779AEE-B384-475A-9A8F-2E9A64F02535}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{39779AEE-B384-475A-9A8F-2E9A64F02535}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39779AEE-B384-475A-9A8F-2E9A64F02535}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39779AEE-B384-475A-9A8F-2E9A64F02535}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DF2D00A-1C3B-40A7-92FA-9FC2B446CE97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
