@@ -69,7 +69,7 @@ namespace DAO
         public static bool SearchDocGia(string tim)
         {
             con = DataProvider.KetNoi();
-            string sTruyVan = string.Format("Select *from tblDocGia where HoTen like N'%" + tim + "%' or DiaChi like N'%" + tim + "%' or Email like '%" + tim + "%' or LoaiThe like N'%" + tim + "%' or TrangThai like N'%" + tim + "%'");
+            string sTruyVan = string.Format("Select a.IdThe N'Mã thẻ',a.Hoten N'Họ Tên',a.DiaChi N'Địa Chỉ', a.Email, a.Sdt N'Điện Thoại', a.LoaiThe N'Loại Thẻ', a.TrangThai N'Trạng Thái' from tblDocGia a where HoTen like N'%" + tim + "%' or DiaChi like N'%" + tim + "%' or Email like '%" + tim + "%' or LoaiThe like N'%" + tim + "%' or TrangThai like N'%" + tim + "%'");
             DataProvider.ThucThiTruyVan(sTruyVan, con);
             DataProvider.DongKetNoi(con);
             return true;
