@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BBC6A7BF-66E0-4F7D-A638-406FF0B07CEE}</ProjectGuid>
+    <ProjectGuid>{E467F23B-D76A-4FAA-B177-3DFFA976D2E2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuanLySach</RootNamespace>
     <AssemblyName>QuanLySach</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -44,53 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDauSach.cs">
+    <Compile Include="frmQuanLiThongTinMuonTra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDauSach.Designer.cs">
-      <DependentUpon>frmDauSach.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDocGia.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDocGia.Designer.cs">
-      <DependentUpon>frmDocGia.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmThongtinMuonTra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongtinMuonTra.Designer.cs">
-      <DependentUpon>frmThongtinMuonTra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmTroGiup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTroGiup.Designer.cs">
-      <DependentUpon>frmTroGiup.cs</DependentUpon>
+    <Compile Include="frmQuanLiThongTinMuonTra.Designer.cs">
+      <DependentUpon>frmQuanLiThongTinMuonTra.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmDauSach.resx">
-      <DependentUpon>frmDauSach.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmDocGia.resx">
-      <DependentUpon>frmDocGia.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongtinMuonTra.resx">
-      <DependentUpon>frmThongtinMuonTra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTroGiup.resx">
-      <DependentUpon>frmTroGiup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -111,15 +72,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">
-      <Project>{1df2d00a-1c3b-40a7-92fa-9fc2b446ce97}</Project>
+      <Project>{53c3974c-80b4-4f43-996f-48d7d8a41f76}</Project>
       <Name>DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
-      <Project>{2725b513-928f-45fe-8bad-f95209135228}</Project>
+      <Project>{d906d6da-5588-49ba-aa0d-c2e9e64439a7}</Project>
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
