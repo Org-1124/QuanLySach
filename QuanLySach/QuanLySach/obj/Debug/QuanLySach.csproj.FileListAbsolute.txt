@@ -1,0 +1,13 @@
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.exe
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.pdb
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DAO.dll
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DTO.dll
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DAO.pdb
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DTO.pdb
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csprojResolveAssemblyReference.cache
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.Properties.Resources.resources
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csproj.GenerateResource.Cache
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.exe
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.pdb
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmMuonSach.resources
+D:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmTraSach.resources

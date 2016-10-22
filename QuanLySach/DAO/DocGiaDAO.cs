@@ -51,11 +51,6 @@ namespace DAO
             con = DataProvider.KetNoi();
             DataProvider.ThucThiTruyVan(sTruyVan, con);
             DataProvider.DongKetNoi(con);
-
-            con = DataProvider.KetNoi();
-            string sTruyVan1 = string.Format("delete from tblThongTinMuonTra where IdThe={0}", DocGia.IdThe);
-            DataProvider.ThucThiTruyVan(sTruyVan1, con);
-            DataProvider.DongKetNoi(con);
             return true;
         }
         public static DataTable ID_DocGiaMax()

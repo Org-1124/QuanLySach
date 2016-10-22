@@ -43,6 +43,7 @@
     <Compile Include="DauSachDAO.cs" />
     <Compile Include="DocGiaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThongTinMuonTraDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">
