@@ -15,7 +15,7 @@ namespace DAO
 
         public static DataTable LoadDataDocGia()
         {
-            string sTruyVan = "select IdThe,HoTen,DiaChi,Email,Sdt,LoaiThe,TrangThai from tblDocGia";
+            string sTruyVan = "Select a.IdThe N'Mã thẻ',a.Hoten N'Họ Tên',a.DiaChi N'Địa Chỉ', a.Email, a.Sdt N'Điện Thoại', a.LoaiThe N'Loại Thẻ', a.TrangThai N'Trạng Thái' from tblDocGia a";
             con = DataProvider.KetNoi();
             DataTable dt = DataProvider.LayData(sTruyVan, con);
             return dt;
@@ -66,13 +66,13 @@ namespace DAO
             DataProvider.DongKetNoi(con);
             return dt;
         }
-        public static bool SearchDocGia(string tim)
+        public static DataTable SearchDocGia(string tim)
         {
-            con = DataProvider.KetNoi();
+            con = DataProvider.KetNoi();           
             string sTruyVan = string.Format("Select a.IdThe N'Mã thẻ',a.Hoten N'Họ Tên',a.DiaChi N'Địa Chỉ', a.Email, a.Sdt N'Điện Thoại', a.LoaiThe N'Loại Thẻ', a.TrangThai N'Trạng Thái' from tblDocGia a where HoTen like N'%" + tim + "%' or DiaChi like N'%" + tim + "%' or Email like '%" + tim + "%' or LoaiThe like N'%" + tim + "%' or TrangThai like N'%" + tim + "%'");
-            DataProvider.ThucThiTruyVan(sTruyVan, con);
+            DataTable dt = DataProvider.LayData(sTruyVan, con);
             DataProvider.DongKetNoi(con);
-            return true;
+            return dt;
         }
     }
 }
