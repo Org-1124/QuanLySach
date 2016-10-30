@@ -11,3 +11,20 @@ C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\o
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csproj.GenerateResource.Cache
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.exe
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.pdb
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.exe.config
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.exe
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.pdb
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csprojResolveAssemblyReference.cache
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmDauSach.resources
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmDocGia.resources
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmMain.resources
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmThongtinMuonTra.resources
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmTroGiup.resources
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.Properties.Resources.resources
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csproj.GenerateResource.Cache
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.exe
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.pdb
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DAO.dll
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DTO.dll
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DAO.pdb
+C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DTO.pdb
