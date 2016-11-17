@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLySachModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tblAnBan">
+    <Key>
+      <PropertyRef Name="IDAnBan" />
+    </Key>
+    <Property Name="IDAnBan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDSach" Type="int" />
+    <Property Name="TrangThai" Type="int" />
+    <Property Name="IDPhieuMuon" Type="int" />
+    <Property Name="IDPhieuTra" Type="int" />
+  </EntityType>
+  <EntityType Name="tblDauSach">
+    <Key>
+      <PropertyRef Name="IDSach" />
+    </Key>
+    <Property Name="IDSach" Type="int" Nullable="false" />
+    <Property Name="TenSach" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TenTacGia" Type="nvarchar" MaxLength="50" />
+    <Property Name="TheLoaiSach" Type="nvarchar" MaxLength="20" />
+    <Property Name="NgonNgu" Type="nchar" MaxLength="50" />
+    <Property Name="Gia" Type="int" />
+    <Property Name="GhiChu" Type="nvarchar" MaxLength="50" />
+    <Property Name="SoLuongConLai" Type="int" />
+  </EntityType>
+  <EntityType Name="tblDocGia">
+    <Key>
+      <PropertyRef Name="IDThe" />
+    </Key>
+    <Property Name="IDThe" Type="int" Nullable="false" />
+    <Property Name="SDT" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="HoTen" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="30" />
+    <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LoaiThe" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TrangThai" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="tblPhieuMuon">
+    <Key>
+      <PropertyRef Name="IDPhieuMuon" />
+    </Key>
+    <Property Name="IDPhieuMuon" Type="int" Nullable="false" />
+    <Property Name="IDThe" Type="int" Nullable="false" />
+    <Property Name="NgayMuon" Type="date" />
+  </EntityType>
+  <EntityType Name="tblPhieuTra">
+    <Key>
+      <PropertyRef Name="IDPhieuTra" />
+    </Key>
+    <Property Name="IDPhieuTra" Type="int" Nullable="false" />
+    <Property Name="IDThe" Type="int" Nullable="false" />
+    <Property Name="NgayTra" Type="date" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'QuanLySach.dbo.tblTaikhoan' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="tblTaikhoan">
+    <Key>
+      <PropertyRef Name="NguoiDung" />
+      <PropertyRef Name="MatKhau" />
+      <PropertyRef Name="QuyenHan" />
+    </Key>
+    <Property Name="NguoiDung" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="QuyenHan" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tblAnBan_tblDauSach">
+    <End Role="tblDauSach" Type="Self.tblDauSach" Multiplicity="0..1" />
+    <End Role="tblAnBan" Type="Self.tblAnBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDauSach">
+        <PropertyRef Name="IDSach" />
+      </Principal>
+      <Dependent Role="tblAnBan">
+        <PropertyRef Name="IDSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAnBan_tblPhieuMuon">
+    <End Role="tblPhieuMuon" Type="Self.tblPhieuMuon" Multiplicity="0..1" />
+    <End Role="tblAnBan" Type="Self.tblAnBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPhieuMuon">
+        <PropertyRef Name="IDPhieuMuon" />
+      </Principal>
+      <Dependent Role="tblAnBan">
+        <PropertyRef Name="IDPhieuMuon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblAnBan_tblPhieuTra">
+    <End Role="tblPhieuTra" Type="Self.tblPhieuTra" Multiplicity="0..1" />
+    <End Role="tblAnBan" Type="Self.tblAnBan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblPhieuTra">
+        <PropertyRef Name="IDPhieuTra" />
+      </Principal>
+      <Dependent Role="tblAnBan">
+        <PropertyRef Name="IDPhieuTra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPhieuMuon_tblDocGia">
+    <End Role="tblDocGia" Type="Self.tblDocGia" Multiplicity="1" />
+    <End Role="tblPhieuMuon" Type="Self.tblPhieuMuon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocGia">
+        <PropertyRef Name="IDThe" />
+      </Principal>
+      <Dependent Role="tblPhieuMuon">
+        <PropertyRef Name="IDThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblPhieuTra_tblDocGia">
+    <End Role="tblDocGia" Type="Self.tblDocGia" Multiplicity="1" />
+    <End Role="tblPhieuTra" Type="Self.tblPhieuTra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocGia">
+        <PropertyRef Name="IDThe" />
+      </Principal>
+      <Dependent Role="tblPhieuTra">
+        <PropertyRef Name="IDThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLySachModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblAnBan" EntityType="Self.tblAnBan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDauSach" EntityType="Self.tblDauSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDocGia" EntityType="Self.tblDocGia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPhieuMuon" EntityType="Self.tblPhieuMuon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblPhieuTra" EntityType="Self.tblPhieuTra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblTaikhoan" EntityType="Self.tblTaikhoan" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [tblTaikhoan].[NguoiDung] AS [NguoiDung], 
+    [tblTaikhoan].[MatKhau] AS [MatKhau], 
+    [tblTaikhoan].[QuyenHan] AS [QuyenHan]
+    FROM [dbo].[tblTaikhoan] AS [tblTaikhoan]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_tblAnBan_tblDauSach" Association="Self.FK_tblAnBan_tblDauSach">
+      <End Role="tblDauSach" EntitySet="tblDauSach" />
+      <End Role="tblAnBan" EntitySet="tblAnBan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAnBan_tblPhieuMuon" Association="Self.FK_tblAnBan_tblPhieuMuon">
+      <End Role="tblPhieuMuon" EntitySet="tblPhieuMuon" />
+      <End Role="tblAnBan" EntitySet="tblAnBan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAnBan_tblPhieuTra" Association="Self.FK_tblAnBan_tblPhieuTra">
+      <End Role="tblPhieuTra" EntitySet="tblPhieuTra" />
+      <End Role="tblAnBan" EntitySet="tblAnBan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPhieuMuon_tblDocGia" Association="Self.FK_tblPhieuMuon_tblDocGia">
+      <End Role="tblDocGia" EntitySet="tblDocGia" />
+      <End Role="tblPhieuMuon" EntitySet="tblPhieuMuon" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPhieuTra_tblDocGia" Association="Self.FK_tblPhieuTra_tblDocGia">
+      <End Role="tblDocGia" EntitySet="tblDocGia" />
+      <End Role="tblPhieuTra" EntitySet="tblPhieuTra" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

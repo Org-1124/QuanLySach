@@ -11,8 +11,29 @@ C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\o
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csproj.GenerateResource.Cache
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.exe
 C:\Users\DELL PC\Desktop\dua vao trong Github-quanlysach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.pdb
-
 E:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.exe.config
 E:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.exe
 E:\Project\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.pdb
-
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.exe.config
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.exe
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.pdb
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csprojResolveAssemblyReference.cache
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmDauSach.resources
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmDocGia.resources
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmMain.resources
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmThongtinMuonTra.resources
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmTroGiup.resources
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.Properties.Resources.resources
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csproj.GenerateResource.Cache
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.exe
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\QuanLySach.pdb
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DAO.dll
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DTO.dll
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\EntityFramework.dll
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DAO.pdb
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\DTO.pdb
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\EntityFramework.xml
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmMuonSach.resources
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmTraSach.resources

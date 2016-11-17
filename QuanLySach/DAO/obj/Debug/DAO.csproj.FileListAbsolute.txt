@@ -5,3 +5,10 @@ C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DTO.pdb
 C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
 C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.dll
 C:\Users\dau-da\Documents\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.pdb
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.dll
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\DAO\obj\Debug\DAO.pdb
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DAO.dll
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DAO.pdb
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DTO.dll
+C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\DAO\bin\Debug\DTO.pdb
