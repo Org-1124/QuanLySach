@@ -28,7 +28,7 @@ namespace QuanLySach
             cboThe.DataSource = database.tblDocGias.ToList();
             cboThe.DisplayMember = "HoTen";
             cboThe.ValueMember = "IDThe";
-            DataRowView drw = null;
+            
             AutoCompleteStringCollection ac = new AutoCompleteStringCollection();
             ac.AddRange(database.tblDocGias.Select(n => n.HoTen).ToArray());
             cboThe.AutoCompleteCustomSource = ac;
