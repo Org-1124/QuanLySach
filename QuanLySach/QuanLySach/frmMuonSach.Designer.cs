@@ -52,9 +52,9 @@
             this.lsvSachMuon = new System.Windows.Forms.ListView();
             this.colIDAnBan = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colTenSach = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.xóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -81,6 +81,7 @@
             // 
             // btnHoanTat
             // 
+            this.btnHoanTat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHoanTat.Location = new System.Drawing.Point(744, 8);
             this.btnHoanTat.Name = "btnHoanTat";
             this.btnHoanTat.Size = new System.Drawing.Size(75, 23);
@@ -100,6 +101,8 @@
             // 
             // cboThe
             // 
+            this.cboThe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboThe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.cboThe.FormattingEnabled = true;
             this.cboThe.Location = new System.Drawing.Point(466, 10);
             this.cboThe.Name = "cboThe";
@@ -111,7 +114,7 @@
             this.txtPhieuMuon.Location = new System.Drawing.Point(96, 10);
             this.txtPhieuMuon.Name = "txtPhieuMuon";
             this.txtPhieuMuon.ReadOnly = true;
-            this.txtPhieuMuon.Size = new System.Drawing.Size(100, 20);
+            this.txtPhieuMuon.Size = new System.Drawing.Size(131, 20);
             this.txtPhieuMuon.TabIndex = 1;
             // 
             // label1
@@ -154,6 +157,8 @@
             // 
             // dgvAnBan
             // 
+            this.dgvAnBan.AllowUserToResizeColumns = false;
+            this.dgvAnBan.AllowUserToResizeRows = false;
             this.dgvAnBan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAnBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAnBan.ContextMenuStrip = this.contextMenuStrip1;
@@ -278,13 +283,17 @@
             // 
             // colIDAnBan
             // 
-            this.colIDAnBan.Text = "ID Ấn Bản";
+            this.colIDAnBan.Text = "ID Sách";
             this.colIDAnBan.Width = 66;
             // 
             // colTenSach
             // 
             this.colTenSach.Text = "Tên sách";
             this.colTenSach.Width = 209;
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.Text = "Số lượng";
             // 
             // contextMenuStrip2
             // 
@@ -299,10 +308,6 @@
             this.xóaToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
             this.xóaToolStripMenuItem.Text = "Xóa";
             this.xóaToolStripMenuItem.Click += new System.EventHandler(this.xóaToolStripMenuItem_Click_1);
-            // 
-            // colSoLuong
-            // 
-            this.colSoLuong.Text = "Số lượng";
             // 
             // frmMuonSach
             // 

@@ -48,7 +48,7 @@ namespace QuanLySach
         private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (tabForm.TabPages.Count != 0) tabForm.TabPages.Remove(tab);
-            frmThongtinMuonTra frm = new frmThongtinMuonTra();
+            frmMuonSach frm = new frmMuonSach();
             frm.TopLevel = false; 
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Dock = DockStyle.Fill;

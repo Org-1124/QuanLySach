@@ -30,7 +30,6 @@ namespace QuanLySach
         public virtual DbSet<tblDauSach> tblDauSaches { get; set; }
         public virtual DbSet<tblDocGia> tblDocGias { get; set; }
         public virtual DbSet<tblPhieuMuon> tblPhieuMuons { get; set; }
-        public virtual DbSet<tblPhieuTra> tblPhieuTras { get; set; }
         public virtual DbSet<tblTaikhoan> tblTaikhoans { get; set; }
     }
 }

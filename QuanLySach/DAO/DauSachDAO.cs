@@ -42,7 +42,7 @@ namespace DAO
         {
             try
             {
-                string sTruyVan = string.Format("update tblDauSach set TenSach={0},TentacGia={1},TheLoaiSach={2},NgonNgu={3},Gia={4},SoLuongConLai={5},GhiChu={6} where IDSach={7}", ds.TenSach, ds.TenTacGia, ds.TheLoaiSach, ds.NgonNgu, ds.Gia, ds.SoLuongConLai, ds.GhiChu, ds.IDSach);
+                string sTruyVan = string.Format("update tblDauSach set TenSach=N'{0}',TentacGia=N'{1}',TheLoaiSach=N'{2}',NgonNgu=N'{3}',Gia={4},SoLuongConLai={5},GhiChu=N'{6}' where IDSach={7}", ds.TenSach, ds.TenTacGia, ds.TheLoaiSach, ds.NgonNgu, ds.Gia, ds.SoLuongConLai, ds.GhiChu, ds.IDSach);
                 con = DataProvider.KetNoi();
                 DataProvider.ThucThiTruyVan(sTruyVan, con);
                 DataProvider.DongKetNoi(con);

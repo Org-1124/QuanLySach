@@ -18,7 +18,6 @@ namespace QuanLySach
         public tblDocGia()
         {
             this.tblPhieuMuons = new HashSet<tblPhieuMuon>();
-            this.tblPhieuTras = new HashSet<tblPhieuTra>();
         }
     
         public int IDThe { get; set; }
@@ -31,7 +30,5 @@ namespace QuanLySach
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblPhieuMuon> tblPhieuMuons { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblPhieuTra> tblPhieuTras { get; set; }
     }
 }

@@ -124,9 +124,6 @@
     <Compile Include="tblPhieuMuon.cs">
       <DependentUpon>QuanLySach.tt</DependentUpon>
     </Compile>
-    <Compile Include="tblPhieuTra.cs">
-      <DependentUpon>QuanLySach.tt</DependentUpon>
-    </Compile>
     <Compile Include="tblTaikhoan.cs">
       <DependentUpon>QuanLySach.tt</DependentUpon>
     </Compile>

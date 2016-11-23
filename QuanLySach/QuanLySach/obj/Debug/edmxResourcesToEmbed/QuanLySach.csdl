@@ -1,10 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="QuanLySachModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QuanLySachEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="QuanLySachModel.sysdiagram" />
+    <EntitySet Name="tblAnBans" EntityType="QuanLySachModel.tblAnBan" />
+    <EntitySet Name="tblDauSaches" EntityType="QuanLySachModel.tblDauSach" />
+    <EntitySet Name="tblDocGias" EntityType="QuanLySachModel.tblDocGia" />
+    <EntitySet Name="tblPhieuMuons" EntityType="QuanLySachModel.tblPhieuMuon" />
+    <AssociationSet Name="FK_tblAnBan_tblDauSach" Association="QuanLySachModel.FK_tblAnBan_tblDauSach">
+      <End Role="tblDauSach" EntitySet="tblDauSaches" />
+      <End Role="tblAnBan" EntitySet="tblAnBans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblAnBan_tblPhieuMuon1" Association="QuanLySachModel.FK_tblAnBan_tblPhieuMuon1">
+      <End Role="tblPhieuMuon" EntitySet="tblPhieuMuons" />
+      <End Role="tblAnBan" EntitySet="tblAnBans" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblPhieuMuon_tblDocGia" Association="QuanLySachModel.FK_tblPhieuMuon_tblDocGia">
+      <End Role="tblDocGia" EntitySet="tblDocGias" />
+      <End Role="tblPhieuMuon" EntitySet="tblPhieuMuons" />
+    </AssociationSet>
+    <EntitySet Name="tblTaikhoans" EntityType="QuanLySachModel.tblTaikhoan" />
+  </EntityContainer>
   <EntityType Name="sysdiagram">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="principal_id" Type="Int32" Nullable="false" />
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
@@ -18,38 +38,35 @@
     <Property Name="IDSach" Type="Int32" />
     <Property Name="TrangThai" Type="Int32" />
     <Property Name="IDPhieuMuon" Type="Int32" />
-    <Property Name="IDPhieuTra" Type="Int32" />
-    <NavigationProperty Name="tblDauSach" Relationship="Self.FK_tblAnBan_tblDauSach" FromRole="tblAnBan" ToRole="tblDauSach" />
-    <NavigationProperty Name="tblPhieuMuon" Relationship="Self.FK_tblAnBan_tblPhieuMuon" FromRole="tblAnBan" ToRole="tblPhieuMuon" />
-    <NavigationProperty Name="tblPhieuTra" Relationship="Self.FK_tblAnBan_tblPhieuTra" FromRole="tblAnBan" ToRole="tblPhieuTra" />
+    <NavigationProperty Name="tblDauSach" Relationship="QuanLySachModel.FK_tblAnBan_tblDauSach" FromRole="tblAnBan" ToRole="tblDauSach" />
+    <NavigationProperty Name="tblPhieuMuon" Relationship="QuanLySachModel.FK_tblAnBan_tblPhieuMuon1" FromRole="tblAnBan" ToRole="tblPhieuMuon" />
   </EntityType>
   <EntityType Name="tblDauSach">
     <Key>
       <PropertyRef Name="IDSach" />
     </Key>
     <Property Name="IDSach" Type="Int32" Nullable="false" />
-    <Property Name="TenSach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TenSach" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TenTacGia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="TheLoaiSach" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="NgonNgu" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="NgonNgu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Gia" Type="Int32" />
     <Property Name="GhiChu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="SoLuongConLai" Type="Int32" />
-    <NavigationProperty Name="tblAnBans" Relationship="Self.FK_tblAnBan_tblDauSach" FromRole="tblDauSach" ToRole="tblAnBan" />
+    <NavigationProperty Name="tblAnBans" Relationship="QuanLySachModel.FK_tblAnBan_tblDauSach" FromRole="tblDauSach" ToRole="tblAnBan" />
   </EntityType>
   <EntityType Name="tblDocGia">
     <Key>
       <PropertyRef Name="IDThe" />
     </Key>
     <Property Name="IDThe" Type="Int32" Nullable="false" />
-    <Property Name="SDT" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="HoTen" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SDT" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HoTen" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="DiaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="LoaiThe" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DiaChi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LoaiThe" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="TrangThai" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblPhieuMuons" Relationship="Self.FK_tblPhieuMuon_tblDocGia" FromRole="tblDocGia" ToRole="tblPhieuMuon" />
-    <NavigationProperty Name="tblPhieuTras" Relationship="Self.FK_tblPhieuTra_tblDocGia" FromRole="tblDocGia" ToRole="tblPhieuTra" />
+    <NavigationProperty Name="tblPhieuMuons" Relationship="QuanLySachModel.FK_tblPhieuMuon_tblDocGia" FromRole="tblDocGia" ToRole="tblPhieuMuon" />
   </EntityType>
   <EntityType Name="tblPhieuMuon">
     <Key>
@@ -58,32 +75,12 @@
     <Property Name="IDPhieuMuon" Type="Int32" Nullable="false" />
     <Property Name="IDThe" Type="Int32" Nullable="false" />
     <Property Name="NgayMuon" Type="DateTime" Precision="0" />
-    <NavigationProperty Name="tblAnBans" Relationship="Self.FK_tblAnBan_tblPhieuMuon" FromRole="tblPhieuMuon" ToRole="tblAnBan" />
-    <NavigationProperty Name="tblDocGia" Relationship="Self.FK_tblPhieuMuon_tblDocGia" FromRole="tblPhieuMuon" ToRole="tblDocGia" />
-  </EntityType>
-  <EntityType Name="tblPhieuTra">
-    <Key>
-      <PropertyRef Name="IDPhieuTra" />
-    </Key>
-    <Property Name="IDPhieuTra" Type="Int32" Nullable="false" />
-    <Property Name="IDThe" Type="Int32" Nullable="false" />
-    <Property Name="NgayTra" Type="DateTime" Precision="0" />
-    <NavigationProperty Name="tblAnBans" Relationship="Self.FK_tblAnBan_tblPhieuTra" FromRole="tblPhieuTra" ToRole="tblAnBan" />
-    <NavigationProperty Name="tblDocGia" Relationship="Self.FK_tblPhieuTra_tblDocGia" FromRole="tblPhieuTra" ToRole="tblDocGia" />
-  </EntityType>
-  <EntityType Name="tblTaikhoan">
-    <Key>
-      <PropertyRef Name="NguoiDung" />
-      <PropertyRef Name="MatKhau" />
-      <PropertyRef Name="QuyenHan" />
-    </Key>
-    <Property Name="NguoiDung" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="QuyenHan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="tblAnBans" Relationship="QuanLySachModel.FK_tblAnBan_tblPhieuMuon1" FromRole="tblPhieuMuon" ToRole="tblAnBan" />
+    <NavigationProperty Name="tblDocGia" Relationship="QuanLySachModel.FK_tblPhieuMuon_tblDocGia" FromRole="tblPhieuMuon" ToRole="tblDocGia" />
   </EntityType>
   <Association Name="FK_tblAnBan_tblDauSach">
-    <End Role="tblDauSach" Type="Self.tblDauSach" Multiplicity="0..1" />
-    <End Role="tblAnBan" Type="Self.tblAnBan" Multiplicity="*" />
+    <End Type="QuanLySachModel.tblDauSach" Role="tblDauSach" Multiplicity="0..1" />
+    <End Type="QuanLySachModel.tblAnBan" Role="tblAnBan" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblDauSach">
         <PropertyRef Name="IDSach" />
@@ -93,9 +90,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblAnBan_tblPhieuMuon">
-    <End Role="tblPhieuMuon" Type="Self.tblPhieuMuon" Multiplicity="0..1" />
-    <End Role="tblAnBan" Type="Self.tblAnBan" Multiplicity="*" />
+  <Association Name="FK_tblAnBan_tblPhieuMuon1">
+    <End Type="QuanLySachModel.tblPhieuMuon" Role="tblPhieuMuon" Multiplicity="0..1" />
+    <End Type="QuanLySachModel.tblAnBan" Role="tblAnBan" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblPhieuMuon">
         <PropertyRef Name="IDPhieuMuon" />
@@ -105,21 +102,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblAnBan_tblPhieuTra">
-    <End Role="tblPhieuTra" Type="Self.tblPhieuTra" Multiplicity="0..1" />
-    <End Role="tblAnBan" Type="Self.tblAnBan" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblPhieuTra">
-        <PropertyRef Name="IDPhieuTra" />
-      </Principal>
-      <Dependent Role="tblAnBan">
-        <PropertyRef Name="IDPhieuTra" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_tblPhieuMuon_tblDocGia">
-    <End Role="tblDocGia" Type="Self.tblDocGia" Multiplicity="1" />
-    <End Role="tblPhieuMuon" Type="Self.tblPhieuMuon" Multiplicity="*" />
+    <End Type="QuanLySachModel.tblDocGia" Role="tblDocGia" Multiplicity="1" />
+    <End Type="QuanLySachModel.tblPhieuMuon" Role="tblPhieuMuon" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblDocGia">
         <PropertyRef Name="IDThe" />
@@ -129,45 +114,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tblPhieuTra_tblDocGia">
-    <End Role="tblDocGia" Type="Self.tblDocGia" Multiplicity="1" />
-    <End Role="tblPhieuTra" Type="Self.tblPhieuTra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tblDocGia">
-        <PropertyRef Name="IDThe" />
-      </Principal>
-      <Dependent Role="tblPhieuTra">
-        <PropertyRef Name="IDThe" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <EntityContainer Name="QuanLySachEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="tblAnBans" EntityType="Self.tblAnBan" />
-    <EntitySet Name="tblDauSaches" EntityType="Self.tblDauSach" />
-    <EntitySet Name="tblDocGias" EntityType="Self.tblDocGia" />
-    <EntitySet Name="tblPhieuMuons" EntityType="Self.tblPhieuMuon" />
-    <EntitySet Name="tblPhieuTras" EntityType="Self.tblPhieuTra" />
-    <EntitySet Name="tblTaikhoans" EntityType="Self.tblTaikhoan" />
-    <AssociationSet Name="FK_tblAnBan_tblDauSach" Association="Self.FK_tblAnBan_tblDauSach">
-      <End Role="tblDauSach" EntitySet="tblDauSaches" />
-      <End Role="tblAnBan" EntitySet="tblAnBans" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblAnBan_tblPhieuMuon" Association="Self.FK_tblAnBan_tblPhieuMuon">
-      <End Role="tblPhieuMuon" EntitySet="tblPhieuMuons" />
-      <End Role="tblAnBan" EntitySet="tblAnBans" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblAnBan_tblPhieuTra" Association="Self.FK_tblAnBan_tblPhieuTra">
-      <End Role="tblPhieuTra" EntitySet="tblPhieuTras" />
-      <End Role="tblAnBan" EntitySet="tblAnBans" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblPhieuMuon_tblDocGia" Association="Self.FK_tblPhieuMuon_tblDocGia">
-      <End Role="tblDocGia" EntitySet="tblDocGias" />
-      <End Role="tblPhieuMuon" EntitySet="tblPhieuMuons" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tblPhieuTra_tblDocGia" Association="Self.FK_tblPhieuTra_tblDocGia">
-      <End Role="tblDocGia" EntitySet="tblDocGias" />
-      <End Role="tblPhieuTra" EntitySet="tblPhieuTras" />
-    </AssociationSet>
-  </EntityContainer>
+  <EntityType Name="tblTaikhoan">
+    <Key>
+      <PropertyRef Name="IDTaiKhoan" />
+    </Key>
+    <Property Name="IDTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

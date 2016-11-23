@@ -18,10 +18,8 @@ namespace QuanLySach
         public Nullable<int> IDSach { get; set; }
         public Nullable<int> TrangThai { get; set; }
         public Nullable<int> IDPhieuMuon { get; set; }
-        public Nullable<int> IDPhieuTra { get; set; }
     
         public virtual tblDauSach tblDauSach { get; set; }
         public virtual tblPhieuMuon tblPhieuMuon { get; set; }
-        public virtual tblPhieuTra tblPhieuTra { get; set; }
     }
 }

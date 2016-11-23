@@ -14,8 +14,8 @@ namespace QuanLySach
     
     public partial class tblTaikhoan
     {
-        public string NguoiDung { get; set; }
+        public int IDTaiKhoan { get; set; }
+        public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
-        public string QuyenHan { get; set; }
     }
 }

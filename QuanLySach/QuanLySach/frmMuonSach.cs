@@ -28,6 +28,10 @@ namespace QuanLySach
             cboThe.DataSource = database.tblDocGias.ToList();
             cboThe.DisplayMember = "HoTen";
             cboThe.ValueMember = "IDThe";
+            DataRowView drw = null;
+            AutoCompleteStringCollection ac = new AutoCompleteStringCollection();
+            ac.AddRange(database.tblDocGias.Select(n => n.HoTen).ToArray());
+            cboThe.AutoCompleteCustomSource = ac;
         }
         void LoadDuLieu()
         {
@@ -39,6 +43,7 @@ namespace QuanLySach
             dgvAnBan.Columns["NgonNgu"].HeaderText = "Ngôn Ngữ";
             dgvAnBan.Columns["GhiChu"].HeaderText = "Ghi Chú";
             dgvAnBan.Columns["SoLuongConLai"].HeaderText = "Số lượng còn";
+            dgvAnBan.Columns["tblAnBans"].Visible = false;
         }
         tblDauSach sc;
         DataGridViewRow row;
@@ -50,7 +55,7 @@ namespace QuanLySach
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if(txtSoLuong.Text=="")
+            if (txtSoLuong.Text == "")
             {
                 MessageBox.Show("Mời bạn nhập số lượng");
                 return;
@@ -60,10 +65,36 @@ namespace QuanLySach
                 MessageBox.Show("Yêu cầu chọn ấn bản");
                 return;
             }
-            ListViewItem item = new ListViewItem(sc.IDSach.ToString());
-            item.SubItems.Add(sc.TenSach);
-            item.SubItems.Add(txtSoLuong.Text);
-            lsvSachMuon.Items.Add(item);
+            if (CheckDaMua(sc.IDSach))
+            {
+                foreach (ListViewItem item in lsvSachMuon.Items)
+                {
+                    if (item.SubItems[0].Text == sc.IDSach.ToString())
+                    {
+                        int sl = int.Parse(item.SubItems[2].Text) + int.Parse(txtSoLuong.Text);
+                        item.SubItems[2].Text = sl.ToString();
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                ListViewItem item = new ListViewItem(sc.IDSach.ToString());
+                item.SubItems.Add(sc.TenSach);
+                item.SubItems.Add(txtSoLuong.Text);
+                lsvSachMuon.Items.Add(item);
+            }
+        }
+        bool CheckDaMua(int idsach)
+        {
+            foreach (ListViewItem item in lsvSachMuon.Items)
+            {
+                if (item.SubItems[0].Text == idsach.ToString())
+                {
+                    return true;
+                }
+            }
+            return false;
         }
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -87,11 +118,34 @@ namespace QuanLySach
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            dgvAnBan.DataSource = database.tblDauSaches.Where(n => n.TenSach.Contains(txtTimKiem.Text)).ToList();
+            int ids = 0;
+            int.TryParse(txtTimKiem.Text, out ids);
+            if (ids != 0)
+                dgvAnBan.DataSource = database.tblDauSaches.Where(n => n.TenSach.Contains(txtTimKiem.Text) || n.IDSach == ids).ToList();
+            else
+                dgvAnBan.DataSource = database.tblDauSaches.Where(n => n.TenSach.Contains(txtTimKiem.Text)|| n.TenTacGia.Contains(txtTimKiem.Text)).ToList();
         }
 
+        bool KiemTraHopLe()
+        {
+            foreach(ListViewItem item in lsvSachMuon.Items)
+            {
+                int ids = int.Parse(item.SubItems[0].Text);
+                int slc = (int)database.tblDauSaches.SingleOrDefault(n => n.IDSach == ids).SoLuongConLai;
+                if(int.Parse(item.SubItems[2].Text)>slc)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         private void btnHoanTat_Click(object sender, EventArgs e)
         {
+            if(!KiemTraHopLe())
+            {
+                MessageBox.Show("Số lượng mượn phải ít hơn số lượng còn");
+                return;
+            }
             tblPhieuMuon pm = new tblPhieuMuon();
             pm.IDPhieuMuon = int.Parse(txtPhieuMuon.Text);
             pm.IDThe = (int)cboThe.SelectedValue;
@@ -101,7 +155,7 @@ namespace QuanLySach
             {
                 int idsach = int.Parse(item.SubItems[0].Text);
                 int soluong = int.Parse(item.SubItems[2].Text);
-                List<tblAnBan> anbans = database.tblAnBans.Where(n => n.IDSach == idsach ).Take(soluong).ToList();
+                List<tblAnBan> anbans = database.tblAnBans.Where(n => n.IDSach == idsach && n.TrangThai==1).Take(soluong).ToList();
                 // thay doi trang thai cua cac an ban
                 foreach(tblAnBan ab in anbans)
                 {
@@ -110,16 +164,13 @@ namespace QuanLySach
                 }
                 tblDauSach dausach = database.tblDauSaches.SingleOrDefault(n => n.IDSach == idsach);
                 dausach.SoLuongConLai -= int.Parse(item.SubItems[2].Text);
-                if(dausach.SoLuongConLai<0)
-                {
-                    MessageBox.Show("Số sách lấy phải ít số còn lại trong kho");
-                    return;
-                }
             }
             database.SaveChanges();
-            MessageBox.Show("Hoàn tất mượn sách");
-            this.Close();
 
+            dgvAnBan.DataSource = database.tblDauSaches.ToList();
+            txtPhieuMuon.Text = (database.tblPhieuMuons.Max(n => n.IDPhieuMuon) + 1).ToString();
+            MessageBox.Show("Hoàn tất mượn sách");
+            lsvSachMuon.Items.Clear();
         }
     }
 }

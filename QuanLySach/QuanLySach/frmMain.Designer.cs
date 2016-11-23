@@ -35,6 +35,7 @@
             this.thôngTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabForm = new System.Windows.Forms.TabControl();
+            this.trảSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.thôngTinĐộcGiảToolStripMenuItem,
             this.thôngTinSáchToolStripMenuItem,
             this.thôngTinToolStripMenuItem,
+            this.trảSáchToolStripMenuItem,
             this.trợGiúpToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -75,14 +77,14 @@
             // thôngTinToolStripMenuItem
             // 
             this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
-            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
-            this.thôngTinToolStripMenuItem.Text = "Thông tin mượn trả";
+            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
+            this.thôngTinToolStripMenuItem.Text = "Mượn sách";
             this.thôngTinToolStripMenuItem.Click += new System.EventHandler(this.thôngTinToolStripMenuItem_Click);
             // 
             // trợGiúpToolStripMenuItem1
             // 
             this.trợGiúpToolStripMenuItem1.Name = "trợGiúpToolStripMenuItem1";
-            this.trợGiúpToolStripMenuItem1.Size = new System.Drawing.Size(64, 20);
+            this.trợGiúpToolStripMenuItem1.Size = new System.Drawing.Size(63, 20);
             this.trợGiúpToolStripMenuItem1.Text = "Trợ giúp";
             // 
             // tabForm
@@ -96,6 +98,12 @@
             this.tabForm.TabIndex = 1;
             this.tabForm.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tabForm_DrawItem);
             this.tabForm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabForm_MouseDown);
+            // 
+            // trảSáchToolStripMenuItem
+            // 
+            this.trảSáchToolStripMenuItem.Name = "trảSáchToolStripMenuItem";
+            this.trảSáchToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.trảSáchToolStripMenuItem.Text = "Trả sách";
             // 
             // frmMain
             // 
@@ -123,7 +131,7 @@
         private System.Windows.Forms.ToolStripMenuItem thôngTinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem1;
         private System.Windows.Forms.TabControl tabForm;
-
+        private System.Windows.Forms.ToolStripMenuItem trảSáchToolStripMenuItem;
     }
 }
 

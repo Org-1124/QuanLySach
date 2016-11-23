@@ -21,7 +21,6 @@ C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debu
 C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmDauSach.resources
 C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmDocGia.resources
 C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmMain.resources
-C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmThongtinMuonTra.resources
 C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.frmTroGiup.resources
 C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.Properties.Resources.resources
 C:\Users\lehaisonmath\Documents\GitHub\QuanLySach\QuanLySach\QuanLySach\obj\Debug\QuanLySach.csproj.GenerateResource.Cache
